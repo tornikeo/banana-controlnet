@@ -23,9 +23,10 @@ ADD server.py .
 ADD download.py .
 RUN python3 download.py
 
+WORKDIR /workdir
 
 # Add your custom app code, init() and inference()
-ADD app.py .
+COPY . .
 
 EXPOSE 8000
 
